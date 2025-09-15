@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skull Anatomy Project</title>
+  <!-- Fonts: girly + futuristic combo -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+  <div class="container">
+    <main>
+      <div class="content" data-aos="fade-right" data-aos-duration="1000">
+        <div class="tag-box">
+          <div class="tag">Skull Anatomy Project</div>
+        </div>
+        <h1 data-aos="fade-up" data-aos-delay="300">Explore the <br><span>Human Skull</span></h1>
+        <p class="description" data-aos="fade-up" data-aos-delay="400">
+          Welcome to my creative anatomy project! This interactive 3D skull model
+          lets you learn about the main bones of the skull in a fun and futuristic way.
+          Rotate, zoom, and explore the details as if you were in a digital lab.
+        </p>
+        <div class="button" data-aos="zoom-in" data-aos-delay="600">
+          <button class="btn-explore" id="explore-btn">Start Exploring</button>
+        </div>
+      </div>
+
+      <!-- Skull 3D absolute on right -->
+      <spline-viewer 
+        class="skull-3d" 
+        url="https://prod.spline.design/TDIRpbjYlHxUbQoA/scene.splinecode"
+        interaction-policy="none"
+        data-aos="fade-left" data-aos-duration="1500">
+      </spline-viewer>
+    </main>
+  </div>
+
+  <!-- Extra Learning Sections -->
+  <section class="section-info" id="first-info" data-aos="fade-up">
+    <h2>The Skull: A Digital Dissection</h2>
+    <p>
+      The skull protects the brain and supports the structures of the face. 
+      In this project, you’ll explore the <b>frontal</b>, <b>parietal</b>, and <b>occipital</b> bones interactively.
+    </p>
+  </section>
+
+  <section class="section-info alt" data-aos="fade-left" data-aos-delay="200">
+    <h2>Frontal Bone</h2>
+    <p>
+      This bone forms the forehead and upper eye sockets. It plays a key role 
+      in protecting the front part of the brain.
+    </p>
+    <p><b>Fun Fact:</b> The frontal bone is one of the strongest bones in the skull, capable of withstanding significant impact, which is why your forehead can take a hit better than other parts!</p>
+  </section>
+
+  <section class="section-info" data-aos="fade-right" data-aos-delay="300">
+    <h2>Parietal Bones</h2>
+    <p>
+      These paired bones form the sides and roof of the cranium. They meet at 
+      the sagittal suture at the top of the head.
+    </p>
+    <p><b>Fun Fact:</b> The parietal bones are so well-interlocked at the sagittal suture that they can stay connected even in ancient skulls unearthed by archaeologists!</p>
+  </section>
+
+  <section class="section-info alt" data-aos="fade-up" data-aos-delay="400">
+    <h2>Occipital Bone</h2>
+    <p>
+      Located at the back of the skull, this bone contains the foramen magnum, 
+      where the spinal cord passes through.
+    </p>
+    <p><b>Fun Fact:</b> The occipital bone’s foramen magnum is like a gateway for your nervous system, allowing your brain to communicate with the rest of your body through the spinal cord!</p>
+  </section>
+
+  <!-- Quiz Section -->
+  <section class="section-info" id="quiz-section" data-aos="fade-up" data-aos-delay="500">
+    <h2>Test Your Knowledge: Skull Anatomy Quiz</h2>
+    <div id="image-container" class="image-container"></div>
+    <div class="quiz-container">
+      <div id="score-container" class="hide">Score: <span id="score">0</span></div>
+      <div id="question-container" class="hide">
+        <h3 id="question">Question text</h3>
+        <div id="answer-buttons" class="btn-grid"></div>
+      </div>
+      <div id="result-container" class="hide">
+        <h3 id="result-text"></h3>
+        <button id="restart-btn" class="btn-explore hide">Restart Quiz</button>
+      </div>
+      <div class="button">
+        <button id="start-btn" class="btn-explore">Start Quiz</button>
+        <button id="next-btn" class="btn-explore hide">Next</button>
+      </div>
+    </div>
+    <button id="generate-full-btn" class="btn-explore hide" disabled>Generate Full Picture</button>
+  </section>
+
+  <footer class="footer" data-aos="fade-up" data-aos-delay="600">
+    <p>Created with ❤️ as a first-year medical project. Explore, learn, and enjoy!</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.57/build/spline-viewer.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="script.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      duration: 1000,
+      offset: 100
+    });
+  </script>
+</body>
+</html>
