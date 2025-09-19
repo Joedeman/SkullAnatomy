@@ -260,7 +260,7 @@ function showFinalScore() {
   questionContainer.classList.add("hide");
   scoreContainer.classList.add("hide");
   resultContainer.classList.remove("hide");
-  resultText.innerText = Final Score: ${score}/${questions.length} 🎉;
+  resultText.innerText = `Final Score: ${score}/${questions.length} 🎉`;
   restartButton.classList.remove("hide");
   generateFullBtn.disabled = false;   // Enable now
 }
