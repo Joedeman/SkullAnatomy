@@ -48,9 +48,9 @@ const questions = [
     correctAnswer: "Lambda"
   },
   {
-    question: "What is this bone called?",
+    question: "I'm the bone that gives you your cheecky look-without me, no high cheekbones for selfies! Which bone am i?",
     type: "text",
-    correctAnswer: "Temporal bone",
+    correctAnswer: "Zygomatic bone",
     image: "assets/temporal.jpg"
   },
   {
@@ -64,6 +64,11 @@ const questions = [
     type: "text",
     correctAnswer: "Mandible",
     image: "assets/mandible.jpg"
+  },
+  {
+    question: "Which bone of the skull is often compared to a bat because of its wing-like shape at the base of the cranium?",
+    type: "text",
+    correctAnswer: "Sphenoid bone",
   },
   {
     question: "Which bone forms the upper jaw and holds the upper teeth in place?",
@@ -255,7 +260,7 @@ function showFinalScore() {
   questionContainer.classList.add("hide");
   scoreContainer.classList.add("hide");
   resultContainer.classList.remove("hide");
-  resultText.innerText = `Final Score: ${score}/${questions.length} 🎉`;
+  resultText.innerText = Final Score: ${score}/${questions.length} 🎉;
   restartButton.classList.remove("hide");
   generateFullBtn.disabled = false;   // Enable now
 }
